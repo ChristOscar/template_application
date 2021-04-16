@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'landingscene.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -13,6 +15,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      initialRoute: '/',
+      routes: {
+        '/': (BuildContext ctx) => LandingScene(),
+        '/browse': (BuildContext ctx) => Browse(),
+        '/profile': (BuildContext ctx) => Profile(),
+      },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
